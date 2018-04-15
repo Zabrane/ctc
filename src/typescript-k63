@@ -1,0 +1,520 @@
+Script started on Sun Sep  5 18:21:57 2004
+ale_1_s[Kf[Kforeach i (c bc dtc ctc0 ctc1 ctc2 ctc3 ctc4 ctc5 ctc6)
+foreach? foreach j (0 1 2)
+foreach? echo tak_$i try $j
+foreach? ./tak_$i
+foreach? end
+foreach? end
+tak_c try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			251017394
+
+Metrics:
+Cycles			251017394
+tak_c try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			251017341
+
+Metrics:
+Cycles			251017341
+tak_c try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			251090726
+
+Metrics:
+Cycles			251090726
+tak_bc try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			3074592225
+
+Metrics:
+Cycles			3074592225
+tak_bc try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			3074546779
+
+Metrics:
+Cycles			3074546779
+tak_bc try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			3074592687
+
+Metrics:
+Cycles			3074592687
+tak_dtc try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			2215122591
+
+Metrics:
+Cycles			2215122591
+tak_dtc try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			2215038040
+
+Metrics:
+Cycles			2215038040
+tak_dtc try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			2215038176
+
+Metrics:
+Cycles			2215038176
+tak_ctc0 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1472862757
+
+Metrics:
+Cycles			1472862757
+tak_ctc0 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1472907729
+
+Metrics:
+Cycles			1472907729
+tak_ctc0 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1472859813
+
+Metrics:
+Cycles			1472859813
+tak_ctc1 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1279325492
+
+Metrics:
+Cycles			1279325492
+tak_ctc1 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1279294788
+
+Metrics:
+Cycles			1279294788
+tak_ctc1 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1279448763
+
+Metrics:
+Cycles			1279448763
+tak_ctc2 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1007386892
+
+Metrics:
+Cycles			1007386892
+tak_ctc2 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1007430664
+
+Metrics:
+Cycles			1007430664
+tak_ctc2 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1007617966
+
+Metrics:
+Cycles			1007617966
+tak_ctc3 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1851016455
+
+Metrics:
+Cycles			1851016455
+tak_ctc3 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1851017422
+
+Metrics:
+Cycles			1851017422
+tak_ctc3 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1851030267
+
+Metrics:
+Cycles			1851030267
+tak_ctc4 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1637247699
+
+Metrics:
+Cycles			1637247699
+tak_ctc4 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1637388732
+
+Metrics:
+Cycles			1637388732
+tak_ctc4 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1637407675
+
+Metrics:
+Cycles			1637407675
+tak_ctc5 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1546247170
+
+Metrics:
+Cycles			1546247170
+tak_ctc5 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1546261339
+
+Metrics:
+Cycles			1546261339
+tak_ctc5 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1546350949
+
+Metrics:
+Cycles			1546350949
+tak_ctc6 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1363277680
+
+Metrics:
+Cycles			1363277680
+tak_ctc6 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1363178778
+
+Metrics:
+Cycles			1363178778
+tak_ctc6 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		0 (Generic x86 with TSC)
+cpu_features		0x2 (rdtsc)
+cpu_khz			399814
+tsc_to_cpu_mult		1
+cpu_nrctrs		0
+
+Configuration #0:
+tsc_on			1
+nractrs			0
+tsc			1363266632
+
+Metrics:
+Cycles			1363266632
+ale_2_exit
+
+Script done on Sun Sep  5 18:38:52 2004

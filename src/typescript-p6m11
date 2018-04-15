@@ -1,0 +1,1119 @@
+Script started on Mon 06 Sep 2004 05:37:42 PM CEST
+dryhop_1_foreach i (c bc dtc ctc0 ctc1 ctc2 ctc3 ctc4 ctc5 ctc6)
+foreach? foreach j (0 1 2)
+foreach? echo tak_$i try $j
+foreach? ./tak_$i
+foreach? end
+foreach? end
+tak_c try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			259605355
+pmc[0]			259192285
+pmc[1]			296021994
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			519115013
+pmc[0]			3894130
+pmc[1]			52716690
+
+Metrics:
+Cycles			259192285
+Instructions		296021994
+CPI			0.875585
+BMR			0.073869
+tak_c try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			259548314
+pmc[0]			259191263
+pmc[1]			296021992
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			519080172
+pmc[0]			3894118
+pmc[1]			52716698
+
+Metrics:
+Cycles			259191263
+Instructions		296021992
+CPI			0.875581
+BMR			0.073869
+tak_c try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			259563013
+pmc[0]			259192502
+pmc[1]			296021993
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			519075481
+pmc[0]			3894179
+pmc[1]			52716694
+
+Metrics:
+Cycles			259192502
+Instructions		296021993
+CPI			0.875585
+BMR			0.073870
+tak_bc try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			2359697789
+pmc[0]			2356389818
+pmc[1]			1650433903
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			4719083889
+pmc[0]			105113005
+pmc[1]			466341417
+
+Metrics:
+Cycles			2356389818
+Instructions		1650433903
+CPI			1.427740
+BMR			0.225399
+tak_bc try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			2359397212
+pmc[0]			2356389753
+pmc[1]			1650433905
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			4718738424
+pmc[0]			105112972
+pmc[1]			466341401
+
+Metrics:
+Cycles			2356389753
+Instructions		1650433905
+CPI			1.427740
+BMR			0.225399
+tak_bc try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			2359433180
+pmc[0]			2356391270
+pmc[1]			1650433907
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			4718780592
+pmc[0]			105113018
+pmc[1]			466341401
+
+Metrics:
+Cycles			2356391270
+Instructions		1650433907
+CPI			1.427740
+BMR			0.225399
+tak_dtc try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			2129639828
+pmc[0]			2126624013
+pmc[1]			1330079125
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			4258978138
+pmc[0]			105112818
+pmc[1]			316301722
+
+Metrics:
+Cycles			2126624013
+Instructions		1330079125
+CPI			1.598870
+BMR			0.332318
+tak_dtc try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			2129361001
+pmc[0]			2126623366
+pmc[1]			1330079125
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			4258653085
+pmc[0]			105112826
+pmc[1]			316301714
+
+Metrics:
+Cycles			2126623366
+Instructions		1330079125
+CPI			1.598870
+BMR			0.332318
+tak_dtc try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			2129381615
+pmc[0]			2126625812
+pmc[1]			1330079127
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			4258695003
+pmc[0]			105112821
+pmc[1]			316301714
+
+Metrics:
+Cycles			2126625812
+Instructions		1330079127
+CPI			1.598872
+BMR			0.332318
+tak_ctc0 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1421563068
+pmc[0]			1419728580
+pmc[1]			1175985495
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2843371571
+pmc[0]			22361737
+pmc[1]			364962872
+
+Metrics:
+Cycles			1419728580
+Instructions		1175985495
+CPI			1.207267
+BMR			0.061271
+tak_ctc0 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1421561640
+pmc[0]			1419727279
+pmc[1]			1175985495
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2843098488
+pmc[0]			22361785
+pmc[1]			364962872
+
+Metrics:
+Cycles			1419727279
+Instructions		1175985495
+CPI			1.207266
+BMR			0.061271
+tak_ctc0 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1421564848
+pmc[0]			1419727371
+pmc[1]			1175985495
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2843072085
+pmc[0]			22361712
+pmc[1]			364962872
+
+Metrics:
+Cycles			1419727371
+Instructions		1175985495
+CPI			1.207266
+BMR			0.061271
+tak_ctc1 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1248351120
+pmc[0]			1246739679
+pmc[1]			1070552125
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2496671667
+pmc[0]			14892405
+pmc[1]			336576856
+
+Metrics:
+Cycles			1246739679
+Instructions		1070552125
+CPI			1.164576
+BMR			0.044247
+tak_ctc1 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1248394888
+pmc[0]			1246741641
+pmc[1]			1070552129
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2496707117
+pmc[0]			14892376
+pmc[1]			336576856
+
+Metrics:
+Cycles			1246741641
+Instructions		1070552129
+CPI			1.164578
+BMR			0.044247
+tak_ctc1 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1248360482
+pmc[0]			1246739776
+pmc[1]			1070552124
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2496673272
+pmc[0]			14892422
+pmc[1]			336576835
+
+Metrics:
+Cycles			1246739776
+Instructions		1070552124
+CPI			1.164576
+BMR			0.044247
+tak_ctc2 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1049835848
+pmc[0]			1048151710
+pmc[1]			965119263
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2099315558
+pmc[0]			14892794
+pmc[1]			336576648
+
+Metrics:
+Cycles			1048151710
+Instructions		965119263
+CPI			1.086033
+BMR			0.044248
+tak_ctc2 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1049658303
+pmc[0]			1048152992
+pmc[1]			965119268
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2099123914
+pmc[0]			14892791
+pmc[1]			336576648
+
+Metrics:
+Cycles			1048152992
+Instructions		965119268
+CPI			1.086035
+BMR			0.044248
+tak_ctc2 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1049523682
+pmc[0]			1048149899
+pmc[1]			965119262
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2099026980
+pmc[0]			14892810
+pmc[1]			336576645
+
+Metrics:
+Cycles			1048149899
+Instructions		965119262
+CPI			1.086031
+BMR			0.044248
+tak_ctc3 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1448799348
+pmc[0]			1446933987
+pmc[1]			1427402253
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2897559555
+pmc[0]			22165436
+pmc[1]			377128191
+
+Metrics:
+Cycles			1446933987
+Instructions		1427402253
+CPI			1.013683
+BMR			0.058774
+tak_ctc3 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1448842477
+pmc[0]			1446935676
+pmc[1]			1427402256
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2897595396
+pmc[0]			22165312
+pmc[1]			377128191
+
+Metrics:
+Cycles			1446935676
+Instructions		1427402256
+CPI			1.013685
+BMR			0.058774
+tak_ctc3 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1448797750
+pmc[0]			1446934474
+pmc[1]			1427402252
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2897865571
+pmc[0]			22165396
+pmc[1]			377128191
+
+Metrics:
+Cycles			1446934474
+Instructions		1427402252
+CPI			1.013684
+BMR			0.058774
+tak_ctc4 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1287552711
+pmc[0]			1285881242
+pmc[1]			1305748337
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2575081500
+pmc[0]			14892445
+pmc[1]			336576905
+
+Metrics:
+Cycles			1285881242
+Instructions		1305748337
+CPI			0.984785
+BMR			0.044247
+tak_ctc4 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1287548148
+pmc[0]			1285881368
+pmc[1]			1305748336
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2575046499
+pmc[0]			14892435
+pmc[1]			336576893
+
+Metrics:
+Cycles			1285881368
+Instructions		1305748336
+CPI			0.984785
+BMR			0.044247
+tak_ctc4 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1287543679
+pmc[0]			1285880808
+pmc[1]			1305748336
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2575051140
+pmc[0]			14892449
+pmc[1]			336576897
+
+Metrics:
+Cycles			1285880808
+Instructions		1305748336
+CPI			0.984785
+BMR			0.044247
+tak_ctc5 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1185389074
+pmc[0]			1183820042
+pmc[1]			1200315500
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2370706036
+pmc[0]			14892424
+pmc[1]			336576797
+
+Metrics:
+Cycles			1183820042
+Instructions		1200315500
+CPI			0.986257
+BMR			0.044247
+tak_ctc5 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1185370963
+pmc[0]			1183819285
+pmc[1]			1200315500
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2370671964
+pmc[0]			14892426
+pmc[1]			336576785
+
+Metrics:
+Cycles			1183819285
+Instructions		1200315500
+CPI			0.986257
+BMR			0.044247
+tak_ctc5 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1185345976
+pmc[0]			1183817976
+pmc[1]			1200315498
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2370962269
+pmc[0]			14892435
+pmc[1]			336576793
+
+Metrics:
+Cycles			1183817976
+Instructions		1200315498
+CPI			0.986256
+BMR			0.044247
+tak_ctc6 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1026084527
+pmc[0]			1024691930
+pmc[1]			940788188
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2052058922
+pmc[0]			14892386
+pmc[1]			336576625
+
+Metrics:
+Cycles			1024691930
+Instructions		940788188
+CPI			1.089185
+BMR			0.044247
+tak_ctc6 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1026018761
+pmc[0]			1024688604
+pmc[1]			940788184
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2051994074
+pmc[0]			14892360
+pmc[1]			336576621
+
+Metrics:
+Cycles			1024688604
+Instructions		940788184
+CPI			1.089181
+BMR			0.044247
+tak_ctc6 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		5 (Intel Pentium III)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			1403203
+tsc_to_cpu_mult		1
+cpu_nrctrs		2
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00410079
+pmc_map[1]		1
+evntsel[1]		0x000100C0
+tsc			1026052488
+pmc[0]			1024690040
+pmc[1]			940788186
+
+Configuration #1:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x004100C5
+pmc_map[1]		1
+evntsel[1]		0x000100C4
+tsc			2052025784
+pmc[0]			14892372
+pmc[1]			336576620
+
+Metrics:
+Cycles			1024690040
+Instructions		940788186
+CPI			1.089183
+BMR			0.044247
+dryhop_2_exit
+Script done on Mon 06 Sep 2004 05:39:30 PM CEST

@@ -1,0 +1,789 @@
+Script started on Sun Sep  5 21:49:29 2004
+eisbock_1_foreach i (c bc dtc ctc0 ctc1 ctc2 ctc3 ctc4 ctc5 ctc6)
+foreach? foreach j (0 1 2)
+foreach? echo tak_$i try $j
+foreach? ./tak_$i
+foreach? end
+foreach? end
+tak_c try 0
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			6585049
+pmc[0]			368305966
+pmc[1]			395012413
+
+Metrics:
+Cycles			395012413
+Instructions		368305966
+CPI			1.072512
+tak_c try 1
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			6584831
+pmc[0]			368305937
+pmc[1]			395010432
+
+Metrics:
+Cycles			395010432
+Instructions		368305937
+CPI			1.072506
+tak_c try 2
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			6584703
+pmc[0]			368305945
+pmc[1]			395010568
+
+Metrics:
+Cycles			395010568
+Instructions		368305945
+CPI			1.072507
+tak_bc try 0
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			49201464
+pmc[0]			2137744486
+pmc[1]			2951682300
+
+Metrics:
+Cycles			2951682300
+Instructions		2137744486
+CPI			1.380746
+tak_bc try 1
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			49203031
+pmc[0]			2137744492
+pmc[1]			2951681486
+
+Metrics:
+Cycles			2951681486
+Instructions		2137744492
+CPI			1.380746
+tak_bc try 2
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			49203126
+pmc[0]			2137744496
+pmc[1]			2951680239
+
+Metrics:
+Cycles			2951680239
+Instructions		2137744496
+CPI			1.380745
+tak_dtc try 0
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			36370229
+pmc[0]			1187450178
+pmc[1]			2181902916
+
+Metrics:
+Cycles			2181902916
+Instructions		1187450178
+CPI			1.837469
+tak_dtc try 1
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			36371676
+pmc[0]			1187450176
+pmc[1]			2181901531
+
+Metrics:
+Cycles			2181901531
+Instructions		1187450176
+CPI			1.837468
+tak_dtc try 2
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			36370079
+pmc[0]			1187450172
+pmc[1]			2181900424
+
+Metrics:
+Cycles			2181900424
+Instructions		1187450172
+CPI			1.837467
+tak_ctc0 try 0
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			21012937
+pmc[0]			925016074
+pmc[1]			1260592464
+
+Metrics:
+Cycles			1260592464
+Instructions		925016074
+CPI			1.362779
+tak_ctc0 try 1
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			21012996
+pmc[0]			925016074
+pmc[1]			1260588301
+
+Metrics:
+Cycles			1260588301
+Instructions		925016074
+CPI			1.362774
+tak_ctc0 try 2
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			21014645
+pmc[0]			925016082
+pmc[1]			1260590286
+
+Metrics:
+Cycles			1260590286
+Instructions		925016082
+CPI			1.362777
+tak_ctc1 try 0
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			17876147
+pmc[0]			807665294
+pmc[1]			1072410206
+
+Metrics:
+Cycles			1072410206
+Instructions		807665294
+CPI			1.327790
+tak_ctc1 try 1
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			17876136
+pmc[0]			807665294
+pmc[1]			1072407695
+
+Metrics:
+Cycles			1072407695
+Instructions		807665294
+CPI			1.327787
+tak_ctc1 try 2
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			17876224
+pmc[0]			807665296
+pmc[1]			1072408067
+
+Metrics:
+Cycles			1072408067
+Instructions		807665296
+CPI			1.327788
+tak_ctc2 try 0
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			17877760
+pmc[0]			807665300
+pmc[1]			1072411099
+
+Metrics:
+Cycles			1072411099
+Instructions		807665300
+CPI			1.327791
+tak_ctc2 try 1
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			17876196
+pmc[0]			807665293
+pmc[1]			1072407940
+
+Metrics:
+Cycles			1072407940
+Instructions		807665293
+CPI			1.327788
+tak_ctc2 try 2
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			17876134
+pmc[0]			807665295
+pmc[1]			1072407687
+
+Metrics:
+Cycles			1072407687
+Instructions		807665295
+CPI			1.327787
+tak_ctc3 try 0
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			30198617
+pmc[0]			1222257146
+pmc[1]			1811658786
+
+Metrics:
+Cycles			1811658786
+Instructions		1222257146
+CPI			1.482224
+tak_ctc3 try 1
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			30200255
+pmc[0]			1222257152
+pmc[1]			1811656428
+
+Metrics:
+Cycles			1811656428
+Instructions		1222257152
+CPI			1.482222
+tak_ctc3 try 2
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			30198633
+pmc[0]			1222257141
+pmc[1]			1811655620
+
+Metrics:
+Cycles			1811655620
+Instructions		1222257141
+CPI			1.482221
+tak_ctc4 try 0
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			26311787
+pmc[0]			1086771085
+pmc[1]			1578477545
+
+Metrics:
+Cycles			1578477545
+Instructions		1086771085
+CPI			1.452447
+tak_ctc4 try 1
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			26313938
+pmc[0]			1086771079
+pmc[1]			1578474144
+
+Metrics:
+Cycles			1578474144
+Instructions		1086771079
+CPI			1.452444
+tak_ctc4 try 2
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			26311655
+pmc[0]			1086771078
+pmc[1]			1578474518
+
+Metrics:
+Cycles			1578474518
+Instructions		1086771078
+CPI			1.452444
+tak_ctc5 try 0
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			26313227
+pmc[0]			1086771078
+pmc[1]			1578477710
+
+Metrics:
+Cycles			1578477710
+Instructions		1086771078
+CPI			1.452447
+tak_ctc5 try 1
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			26313452
+pmc[0]			1086771086
+pmc[1]			1578474449
+
+Metrics:
+Cycles			1578474449
+Instructions		1086771086
+CPI			1.452444
+tak_ctc5 try 2
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			26311658
+pmc[0]			1086771088
+pmc[1]			1578474421
+
+Metrics:
+Cycles			1578474421
+Instructions		1086771088
+CPI			1.452444
+tak_ctc6 try 0
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			18321331
+pmc[0]			807665306
+pmc[1]			1099114712
+
+Metrics:
+Cycles			1099114712
+Instructions		807665306
+CPI			1.360854
+tak_ctc6 try 1
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			18321357
+pmc[0]			807665301
+pmc[1]			1099112163
+
+Metrics:
+Cycles			1099112163
+Instructions		807665301
+CPI			1.360851
+tak_ctc6 try 2
+Perfctr Info:
+abi_version		0x05010000
+driver_version		2.6.10-pre1
+cpu_type		5 (PowerPC 7450)
+cpu_features		0x3 (rdpmc,rdtsc)
+cpu_khz			1002510
+tsc_to_cpu_mult		60
+cpu_nrctrs		6
+
+Configuration #0:
+tsc_on			1
+nractrs			2
+pmc_map[0]		0
+evntsel[0]		0x00000002
+pmc_map[1]		1
+evntsel[1]		0x00000001
+mmcr0			0x40000000
+tsc			18323060
+pmc[0]			807665310
+pmc[1]			1099112569
+
+Metrics:
+Cycles			1099112569
+Instructions		807665310
+CPI			1.360852
+eisbock_2_exit
+Script done on Sun Sep  5 21:55:40 2004

@@ -1,0 +1,648 @@
+Script started on Sun 05 Sep 2004 09:27:57 PM MEST
+spikklubban_1_foreach i (c bc dtc ctc0 ctc1 ctc2 ctc3 ctc4 ctc4[K5 ctc6)
+foreach? foreach i (0 1 2)
+foreach? echo tak_$i try $j
+foreach? ./tak_$i
+foreach? end
+foreach? end
+j: Undefined variable.
+spikklubban_2_foreach i (c bc dtc ctc0 ctc1 ctc2 ctc3 ctc4 ctc5 ctc6)
+foreach? foreach j (0 1 2)
+foreach? echo tak_$i try $j
+foreach? ./tak_$i
+foreach? end
+foreach? end
+tak_c try 0
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			279173969
+%pic[0]			198893178
+%pic[1]			235480867
+
+Metrics:
+Cycles			235480867
+Instructions		198893178
+CPI			1.183956
+tak_c try 1
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			279244082
+%pic[0]			198892973
+%pic[1]			235474880
+
+Metrics:
+Cycles			235474880
+Instructions		198892973
+CPI			1.183928
+tak_c try 2
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			279980496
+%pic[0]			198893515
+%pic[1]			235489029
+
+Metrics:
+Cycles			235489029
+Instructions		198893515
+CPI			1.183996
+tak_bc try 0
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			3484096783
+%pic[0]			2404686714
+%pic[1]			3478685561
+
+Metrics:
+Cycles			3478685561
+Instructions		2404686714
+CPI			1.446627
+tak_bc try 1
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			3483230141
+%pic[0]			2404686650
+%pic[1]			3478609844
+
+Metrics:
+Cycles			3478609844
+Instructions		2404686650
+CPI			1.446596
+tak_bc try 2
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			3483175655
+%pic[0]			2404686652
+%pic[1]			3478531609
+
+Metrics:
+Cycles			3478531609
+Instructions		2404686652
+CPI			1.446563
+tak_dtc try 0
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			2657530065
+%pic[0]			1484173735
+%pic[1]			2654075610
+
+Metrics:
+Cycles			2654075610
+Instructions		1484173735
+CPI			1.788251
+tak_dtc try 1
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			2658133318
+%pic[0]			1484173915
+%pic[1]			2653974115
+
+Metrics:
+Cycles			2653974115
+Instructions		1484173915
+CPI			1.788183
+tak_dtc try 2
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			2663805757
+%pic[0]			1484174725
+%pic[1]			2654167387
+
+Metrics:
+Cycles			2654167387
+Instructions		1484174725
+CPI			1.788312
+tak_ctc0 try 0
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1578750250
+%pic[0]			1274730331
+%pic[1]			1574752363
+
+Metrics:
+Cycles			1574752363
+Instructions		1274730331
+CPI			1.235361
+tak_ctc0 try 1
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1573252042
+%pic[0]			1274657910
+%pic[1]			1571295785
+
+Metrics:
+Cycles			1571295785
+Instructions		1274657910
+CPI			1.232720
+tak_ctc0 try 2
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1576399543
+%pic[0]			1274721333
+%pic[1]			1574673549
+
+Metrics:
+Cycles			1574673549
+Instructions		1274721333
+CPI			1.235308
+tak_ctc1 try 0
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1375154873
+%pic[0]			1167328590
+%pic[1]			1372703609
+
+Metrics:
+Cycles			1372703609
+Instructions		1167328590
+CPI			1.175936
+tak_ctc1 try 1
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1374646572
+%pic[0]			1167318252
+%pic[1]			1372708375
+
+Metrics:
+Cycles			1372708375
+Instructions		1167318252
+CPI			1.175950
+tak_ctc1 try 2
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1374762848
+%pic[0]			1167345519
+%pic[1]			1372761811
+
+Metrics:
+Cycles			1372761811
+Instructions		1167345519
+CPI			1.175969
+tak_ctc2 try 0
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1374582373
+%pic[0]			1167321650
+%pic[1]			1372640575
+
+Metrics:
+Cycles			1372640575
+Instructions		1167321650
+CPI			1.175889
+tak_ctc2 try 1
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1374574295
+%pic[0]			1167333037
+%pic[1]			1372658209
+
+Metrics:
+Cycles			1372658209
+Instructions		1167333037
+CPI			1.175893
+tak_ctc2 try 2
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1374928140
+%pic[0]			1167370943
+%pic[1]			1372704321
+
+Metrics:
+Cycles			1372704321
+Instructions		1167370943
+CPI			1.175894
+tak_ctc3 try 0
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1578949735
+%pic[0]			1407128172
+%pic[1]			1576907808
+
+Metrics:
+Cycles			1576907808
+Instructions		1407128172
+CPI			1.120657
+tak_ctc3 try 1
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1579101633
+%pic[0]			1407128229
+%pic[1]			1576916061
+
+Metrics:
+Cycles			1576916061
+Instructions		1407128229
+CPI			1.120663
+tak_ctc3 try 2
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1578560072
+%pic[0]			1407128180
+%pic[1]			1576889775
+
+Metrics:
+Cycles			1576889775
+Instructions		1407128180
+CPI			1.120644
+tak_ctc4 try 0
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1332934612
+%pic[0]			1318321483
+%pic[1]			1330611879
+
+Metrics:
+Cycles			1330611879
+Instructions		1318321483
+CPI			1.009323
+tak_ctc4 try 1
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1332942798
+%pic[0]			1318335006
+%pic[1]			1330683214
+
+Metrics:
+Cycles			1330683214
+Instructions		1318335006
+CPI			1.009367
+tak_ctc4 try 2
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1333244586
+%pic[0]			1318390160
+%pic[1]			1330913060
+
+Metrics:
+Cycles			1330913060
+Instructions		1318390160
+CPI			1.009499
+tak_ctc5 try 0
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1332746785
+%pic[0]			1318321209
+%pic[1]			1330620616
+
+Metrics:
+Cycles			1330620616
+Instructions		1318321209
+CPI			1.009330
+tak_ctc5 try 1
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1332377847
+%pic[0]			1318317486
+%pic[1]			1330615652
+
+Metrics:
+Cycles			1330615652
+Instructions		1318317486
+CPI			1.009329
+tak_ctc5 try 2
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1332880445
+%pic[0]			1318383086
+%pic[1]			1330695421
+
+Metrics:
+Cycles			1330695421
+Instructions		1318383086
+CPI			1.009339
+tak_ctc6 try 0
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1332784386
+%pic[0]			1318340195
+%pic[1]			1330670986
+
+Metrics:
+Cycles			1330670986
+Instructions		1318340195
+CPI			1.009353
+tak_ctc6 try 1
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1332738507
+%pic[0]			1318358753
+%pic[1]			1330936781
+
+Metrics:
+Cycles			1330936781
+Instructions		1318358753
+CPI			1.009541
+tak_ctc6 try 2
+CPC Info:
+cpc_version(0) -> 1
+cpc_getcpuver -> 1004
+cpc_getcciname(1004) -> 'UltraSPARC IIIi'
+cpc_getnpic(1004) -> 2
+cpc_getusage(1004) -> 'pic0=<event0>,pic1=<event1> [,sys] [,nouser]'
+Processor Info:
+pi_processor_type -> 'sparcv9'
+pi_clock -> 1002 MHz
+
+Configuration #0:
+pic0=Instr_cnt,pic1=Cycle_cnt
+%tick			1332271390
+%pic[0]			1318397935
+%pic[1]			1330611394
+
+Metrics:
+Cycles			1330611394
+Instructions		1318397935
+CPI			1.009264
+spikklubban_3_exit
+exit
+
+script done on Sun 05 Sep 2004 09:31:12 PM MEST

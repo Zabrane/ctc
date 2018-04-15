@@ -1,0 +1,970 @@
+Script started on Mon 13 Sep 2004 01:06:26 PM CEST
+hallertau_1_foreach i (c bc dtc ctc0 ctc1 ctc2 ctc3 ctc4 ctc5 ctc6)
+foreach? foreach j (0 1 2)foreach j (0 1 2)[K[K[K[K[K[K[K[K[K[K[K[K[K
+foreach? echo tak_$i try $j
+foreach? ./tak_$i
+foreach? end
+foreach? end
+tak_c try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			201537397
+pmc[0]			201374909
+pmc[1]			296021933
+pmc[2]			2748902
+pmc[3]			52716435
+
+Metrics:
+Cycles			201374909
+Instructions		296021933
+CPI			0.680270
+BMR			0.052145
+tak_c try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			203053458
+pmc[0]			202774468
+pmc[1]			296021949
+pmc[2]			2861197
+pmc[3]			52716440
+
+Metrics:
+Cycles			202774468
+Instructions		296021949
+CPI			0.684998
+BMR			0.054275
+tak_c try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			203416317
+pmc[0]			202884942
+pmc[1]			296021946
+pmc[2]			2869655
+pmc[3]			52716437
+
+Metrics:
+Cycles			202884942
+Instructions		296021946
+CPI			0.685371
+BMR			0.054436
+tak_bc try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			3265944119
+pmc[0]			3262240488
+pmc[1]			1905905867
+pmc[2]			104114992
+pmc[3]			466340268
+
+Metrics:
+Cycles			3262240488
+Instructions		1905905867
+CPI			1.711648
+BMR			0.223260
+tak_bc try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			3266565879
+pmc[0]			3262548159
+pmc[1]			1905905880
+pmc[2]			104136937
+pmc[3]			466340270
+
+Metrics:
+Cycles			3262548159
+Instructions		1905905880
+CPI			1.711810
+BMR			0.223307
+tak_bc try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			3265786592
+pmc[0]			3262286727
+pmc[1]			1905905881
+pmc[2]			104118147
+pmc[3]			466340271
+
+Metrics:
+Cycles			3262286727
+Instructions		1905905881
+CPI			1.711673
+BMR			0.223266
+tak_dtc try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			2401510984
+pmc[0]			2398866140
+pmc[1]			1427400568
+pmc[2]			104126830
+pmc[3]			413621478
+
+Metrics:
+Cycles			2398866140
+Instructions		1427400568
+CPI			1.680584
+BMR			0.251744
+tak_dtc try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			2402178184
+pmc[0]			2398865895
+pmc[1]			1427400571
+pmc[2]			104126701
+pmc[3]			413621481
+
+Metrics:
+Cycles			2398865895
+Instructions		1427400571
+CPI			1.680584
+BMR			0.251744
+tak_dtc try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			2401265822
+pmc[0]			2398626475
+pmc[1]			1427400568
+pmc[2]			104109718
+pmc[3]			413621478
+
+Metrics:
+Cycles			2398626475
+Instructions		1427400568
+CPI			1.680416
+BMR			0.251703
+tak_ctc0 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			982995360
+pmc[0]			982186016
+pmc[1]			1127322285
+pmc[2]			13878647
+pmc[3]			348740921
+
+Metrics:
+Cycles			982186016
+Instructions		1127322285
+CPI			0.871256
+BMR			0.039796
+tak_ctc0 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			1044222113
+pmc[0]			1042531756
+pmc[1]			1127322298
+pmc[2]			17899009
+pmc[3]			348740935
+
+Metrics:
+Cycles			1042531756
+Instructions		1127322298
+CPI			0.924786
+BMR			0.051325
+tak_ctc0 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			983396875
+pmc[0]			982588383
+pmc[1]			1127322286
+pmc[2]			13900447
+pmc[3]			348740923
+
+Metrics:
+Cycles			982588383
+Instructions		1127322286
+CPI			0.871613
+BMR			0.039859
+tak_ctc1 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			923344919
+pmc[0]			921891117
+pmc[1]			1034054244
+pmc[2]			13915068
+pmc[3]			336575633
+
+Metrics:
+Cycles			921891117
+Instructions		1034054244
+CPI			0.891531
+BMR			0.041343
+tak_ctc1 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			922248440
+pmc[0]			921485205
+pmc[1]			1034054234
+pmc[2]			13882119
+pmc[3]			336575630
+
+Metrics:
+Cycles			921485205
+Instructions		1034054234
+CPI			0.891138
+BMR			0.041245
+tak_ctc1 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			922535835
+pmc[0]			921101783
+pmc[1]			1034054236
+pmc[2]			13865210
+pmc[3]			336575632
+
+Metrics:
+Cycles			921101783
+Instructions		1034054236
+CPI			0.890767
+BMR			0.041195
+tak_ctc2 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			922069552
+pmc[0]			921290938
+pmc[1]			1034054242
+pmc[2]			13868466
+pmc[3]			336575631
+
+Metrics:
+Cycles			921290938
+Instructions		1034054242
+CPI			0.890950
+BMR			0.041205
+tak_ctc2 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			922760495
+pmc[0]			921650280
+pmc[1]			1034054254
+pmc[2]			13893679
+pmc[3]			336575632
+
+Metrics:
+Cycles			921650280
+Instructions		1034054254
+CPI			0.891298
+BMR			0.041280
+tak_ctc2 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			922448091
+pmc[0]			921346734
+pmc[1]			1034054253
+pmc[2]			13876000
+pmc[3]			336575631
+
+Metrics:
+Cycles			921346734
+Instructions		1034054253
+CPI			0.891004
+BMR			0.041227
+tak_ctc3 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			1129471832
+pmc[0]			1128208284
+pmc[1]			1386849579
+pmc[2]			13885131
+pmc[3]			348740939
+
+Metrics:
+Cycles			1128208284
+Instructions		1386849579
+CPI			0.813504
+BMR			0.039815
+tak_ctc3 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			1130657381
+pmc[0]			1129385644
+pmc[1]			1386849571
+pmc[2]			13948003
+pmc[3]			348740938
+
+Metrics:
+Cycles			1129385644
+Instructions		1386849571
+CPI			0.814353
+BMR			0.039995
+tak_ctc3 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			1130174919
+pmc[0]			1128398921
+pmc[1]			1386849579
+pmc[2]			13893810
+pmc[3]			348740946
+
+Metrics:
+Cycles			1128398921
+Instructions		1386849579
+CPI			0.813642
+BMR			0.039840
+tak_ctc4 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			1072299383
+pmc[0]			1071424766
+pmc[1]			1309802084
+pmc[2]			13893561
+pmc[3]			336575646
+
+Metrics:
+Cycles			1071424766
+Instructions		1309802084
+CPI			0.818005
+BMR			0.041279
+tak_ctc4 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			1072904054
+pmc[0]			1071355076
+pmc[1]			1309802096
+pmc[2]			13886013
+pmc[3]			336575647
+
+Metrics:
+Cycles			1071355076
+Instructions		1309802096
+CPI			0.817952
+BMR			0.041257
+tak_ctc4 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			1072210172
+pmc[0]			1071322576
+pmc[1]			1309802095
+pmc[2]			13885385
+pmc[3]			336575646
+
+Metrics:
+Cycles			1071322576
+Instructions		1309802095
+CPI			0.817927
+BMR			0.041255
+tak_ctc5 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			1072585244
+pmc[0]			1071016218
+pmc[1]			1309802087
+pmc[2]			13869814
+pmc[3]			336575649
+
+Metrics:
+Cycles			1071016218
+Instructions		1309802087
+CPI			0.817693
+BMR			0.041209
+tak_ctc5 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			1071731570
+pmc[0]			1070859970
+pmc[1]			1309802095
+pmc[2]			13865382
+pmc[3]			336575646
+
+Metrics:
+Cycles			1070859970
+Instructions		1309802095
+CPI			0.817574
+BMR			0.041195
+tak_ctc5 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			1072728461
+pmc[0]			1071164442
+pmc[1]			1309802097
+pmc[2]			13879665
+pmc[3]			336575648
+
+Metrics:
+Cycles			1071164442
+Instructions		1309802097
+CPI			0.817806
+BMR			0.041238
+tak_ctc6 try 0
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			1035725869
+pmc[0]			1034868245
+pmc[1]			1050274809
+pmc[2]			13882773
+pmc[3]			336575643
+
+Metrics:
+Cycles			1034868245
+Instructions		1050274809
+CPI			0.985331
+BMR			0.041247
+tak_ctc6 try 1
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			1036428862
+pmc[0]			1034899626
+pmc[1]			1050274804
+pmc[2]			13882750
+pmc[3]			336575645
+
+Metrics:
+Cycles			1034899626
+Instructions		1050274804
+CPI			0.985361
+BMR			0.041247
+tak_ctc6 try 2
+Perfctr Info:
+abi_version		0x05010501
+driver_version		2.6.10-pre1
+cpu_type		15 (AMD K8 Revision C)
+cpu_features		0x7 (rdpmc,rdtsc,pcint)
+cpu_khz			2000149
+tsc_to_cpu_mult		1
+cpu_nrctrs		4
+
+Configuration #0:
+tsc_on			1
+nractrs			4
+pmc_map[0]		0
+evntsel[0]		0x00410076
+pmc_map[1]		1
+evntsel[1]		0x004100C0
+pmc_map[2]		2
+evntsel[2]		0x004100C3
+pmc_map[3]		3
+evntsel[3]		0x004100C2
+tsc			1070187718
+pmc[0]			1069289938
+pmc[1]			1050274806
+pmc[2]			16157711
+pmc[3]			336575647
+
+Metrics:
+Cycles			1069289938
+Instructions		1050274806
+CPI			1.018105
+BMR			0.048006
+hallertau_2_exit
+
+Script done on Mon 13 Sep 2004 01:15:01 PM CEST

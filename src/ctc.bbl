@@ -1,0 +1,163 @@
+\newcommand{\noopsort}[1]{}
+\begin{thebibliography}{10}
+
+\bibitem{Bell73}
+James~R. Bell.
+\newblock Threaded code.
+\newblock {\em Communications of the ACM}, 16(8):370--373, 1973.
+
+\bibitem{BerndlVZB05}
+Marc Berndl, Benjamin Vitale, Mathew Zaleski, and Angela~Demke Brown.
+\newblock Context threading: A flexible and efficient dispatch technique for
+  virtual machine interpreters.
+\newblock In {\em 2005 International Symposium on Code Generation and
+  Optimization}, pages ??--?? ACM?, 2005.
+
+\bibitem{BhandarkarD97}
+Dileep Bhandarkar and Jason Ding.
+\newblock Performance characterization of the {Pentium} {Pro} processor.
+\newblock In {\em Proceedings of the Third International Symposium on High
+  Performance Computer Architecture}, pages ??--?? IEEE, 1997.
+
+\bibitem{Costa99:ppdp}
+Vitor~Santos Costa.
+\newblock Optimising bytecode emulation for {Prolog}.
+\newblock In Gopalan Nadathur, editor, {\em Proceedings of the International
+  Conference on Principles and Practice of Declarative Programming, PPDP'99},
+  volume 1702 of {\em LNCS}, pages 261--277. Springer-Verlag, 1999.
+
+\bibitem{Curley93}
+Charles Curley.
+\newblock Optimization considerations (life in the {FastForth} lane).
+\newblock {\em Forth Dimensions}, pages 6--12, January/February 1993.
+\newblock Available from XXX.
+
+\bibitem{DavisBCGW03}
+Brian Davis, Andrew Beatty, Kevin Casey, David Gregg, and John Waldron.
+\newblock The case for virtual register machines.
+\newblock In IVME'03 \cite{IVME03}, pages 41--49.
+
+\bibitem{Dewar75}
+Robert B.~K. Dewar.
+\newblock Indirect threaded code.
+\newblock {\em Communications of the ACM}, 18(6):330--331, 1975.
+
+\bibitem{ErtlG01}
+M.~Anton Ertl and David Gregg.
+\newblock The behaviour of \emph{Efficient} virtual machine interpreters on
+  modern architectures.
+\newblock In R.~Sakellariou, J.~Keane, J.~Gurd, and L.~Freeman, editors, {\em
+  7th International Euro-Par Conference, Euro-Par 2001}, volume 2150 of {\em
+  LNCS}, pages 403--412. Springer-Verlag, 2001.
+
+\bibitem{ErtlG03:PLDI}
+M.~Anton Ertl and David Gregg.
+\newblock Optimizing indirect branch prediction accuracy in virtual machine
+  interpreters.
+\newblock In {\em Proceedings of the ACM SIGPLAN 2003 Conference on Programming
+  Language Design and Implementation, PLDI'03}, pages 278--288, May 2003.
+
+\bibitem{ErtlG03:JILP}
+M.~Anton Ertl and David Gregg.
+\newblock The {Structure} and {Performance} of \emph{Efficient} {Interpreters}.
+\newblock {\em The Journal of Instruction-Level Parallelism}, 5, November 2003.
+\newblock Expanded version of their Euro-Par 2001 paper.
+
+\bibitem{ErtlG04}
+M.~Anton Ertl and David Gregg.
+\newblock Retargeting {JIT} compilers by using {C}-compiler generated
+  executable code.
+\newblock In {\em Parallel Architectures and Compilation Techniques, PACT'04},
+  pages 41--50, 2004.
+
+\bibitem{HoogerbruggeA00}
+Jan Hoogerbrugge and Lex Augusteijn.
+\newblock Pipelined {Java} virtual machine interpreters.
+\newblock In D.~A. Watt, editor, {\em Compiler Construction, 9th International
+  Conference, CC'00}, volume 1781 of {\em LNCS}, pages 35--49. Springer-Verlag,
+  2000.
+
+\bibitem{HoogerbruggeATW99}
+Jan Hoogerbrugge, Lex Augusteijn, Jeroen Trum, and Rik van~de Wiel.
+\newblock A code compression system based on pipelined interpreters.
+\newblock {\em Software -- Practice and Experience}, 29(11):1005--1023,
+  September 1999.
+
+\bibitem{IA32OPT}
+{Intel Corporation}.
+\newblock {\em {Intel} {Pentium} 4 and {Intel} {Xeon} Processor Optimization
+  Reference Manual}, 2001.
+\newblock Document number 248966-04.
+
+\bibitem{IVME03}
+{\em Proceedings of the ACM SIGPLAN 2003 Workshop on Interpreters, Virtual
+  Machines, and Emulators, IVME'03}. ACM Press, 2003.
+
+\bibitem{Klint81}
+Paul Klint.
+\newblock Interpretation techniques.
+\newblock {\em Software -- Practice and Experience}, 11:963--973, 1981.
+
+\bibitem{Kogge82}
+Peter~M. Kogge.
+\newblock An architectural trail to threaded-code systems.
+\newblock {\em IEEE Computer}, pages 22--32, March 1982.
+
+\bibitem{NassenCS01}
+Henrik N{\"a}ss{\'e}n, Mats Carlsson, and Konstantinos Sagonas.
+\newblock Instruction merging and specialization in the {SICStus} {Prolog}
+  virtual machine.
+\newblock In {\em Proceedings of the 3rd ACM SIGPLAN international conference
+  on Principles and practice of declarative programming}, pages 49--60. ACM
+  Press, 2001.
+
+\bibitem{PiumartaR98}
+Ian Piumarta and Fabio Riccardi.
+\newblock Optimizing direct threaded code by selective inlining.
+\newblock In {\em Proceedings of the ACM SIGPLAN '98 Conference on Programming
+  Language Design and Implementation, PLDI'98}, pages 291--300. ACM Press,
+  1998.
+
+\bibitem{Proebsting95:POPL}
+Todd~A. Proebsting.
+\newblock Optimizing an {ANSI} {C} interpreter with superoperators.
+\newblock In {\em Proceedings of the 22nd Annual ACM Symposium on Principles of
+  Programming Languages, POPL'95}, pages 322--332. ACM, 1995.
+
+\bibitem{Ritter80}
+Terry Ritter.
+\newblock Varieties of threaded code for language implementation.
+\newblock {\em BYTE}, 5(9):206--227, 1980.
+
+\bibitem{Rodriguez93:tcj59}
+Brad Rodriguez.
+\newblock Moving {Forth} {Part} 1: Design decisions in the {Forth} kernel.
+\newblock {\em The Computer Journal}, \#59, January/February 1993.
+\newblock Available from XXX.
+
+\bibitem{RossiS96}
+Markku Rossi and Kengatharan Sivalingam.
+\newblock A suervey of instruction dispatch techniques for byte-code
+  interpreters.
+\newblock Technical Report TKO-C79, Helsinki University Faculty of Information
+  Technology, May 1996.
+
+\bibitem{ShiGBE05}
+Yunhe Shi, David Gregg, Andrew Beatty, and M.~Anton Ertl.
+\newblock Virtual machine showdown: Stack versus registers.
+\newblock In {\em Virtual Execution Environments, VEE'05}, pages ??--?? ACM,
+  2005.
+
+\bibitem{SullivanBBGA03}
+Gregory~T. Sullivan, Derek~L. Bruening, Iris Baron, Timothy Garnett, and Saman
+  Amarasinghe.
+\newblock Dynamic native optimization of interpreters.
+\newblock In IVME'03 \cite{IVME03}, pages 50--57.
+
+\bibitem{VitaleA05}
+Benjamin Vitale and Tarek~S. Abdelrahman.
+\newblock Catenation and specialization for {Tcl} virtual machine performance.
+\newblock In {\em Proceedings of the ACM SIGPLAN 2004 Workshop on Interpreters,
+  Virtual Machines, and Emulators, IVME'04}, pages 42--50. ACM Press, 2004.
+
+\end{thebibliography}

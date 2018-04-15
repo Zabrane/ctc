@@ -1,0 +1,583 @@
+% ctc.tex
+\documentclass[10pt,a4paper]{article}
+%
+\begin{document}
+%
+%\title{Call--threaded virtual machine interpreters}
+\title{Call Threaded Code}
+\author{Mikael Pettersson\\
+	\texttt{mikael.pettersson@acm.org} \thanks{Work done circa 2004 at the
+		Department of Information Technology,
+		Division of Computing Science,
+		Uppsala University, Sweden}}
+\date{	DRAFT}
+\maketitle{}
+%
+\begin{abstract}
+Virtual machine interpreters using the direct threading
+technique execute large numbers of indirect jumps.
+These indirect jumps tend to experience high branch prediction
+miss rates on contemporary processors, resulting in very high
+runtime overheads.
+%
+This paper describes \emph{call threaded code}, in which
+the handlers for virtual machine instructions are
+dispatched using matching pairs of hardware call and
+return instructions. The primary benefit of this
+technique is that it allows modern processors with
+\emph{return address stack} branch predictors to execute
+the dispatch code without any branch prediction misses.
+A secondary benefit is that the interpreter can dispense
+with its \emph{virtual program counter}.
+%
+To evaluate the technique a stack--oriented virtual machine was
+implemented with both direct threading and call threading
+on several different processor architectures.
+On average, the call threaded interpreters were about twice
+as fast as the direct threaded interpreters.
+\end{abstract}
+%
+\section{Introduction}
+Direct threading is a common implementation technique
+used by efficient interpreters for virtual machines.
+It represents each instance of a virtual machine instruction
+by the address of the \emph{handler} (machine code block) that
+interprets instructions of that type. 
+Each handler ends with a sequence to \emph{dispatch}
+the next instruction: loading the next instruction via
+the virtual machine program counter, incrementing the
+virtual machine program counter, and jumping to the address just loaded.
+Compared to simple \emph{token threaded} (bytecoded) interpreters,
+direct threading improves performance by avoiding the need to
+translate instruction tokens (opcodes) to handler addresses
+in the dispatch path, but the indirect jumps tend to have
+unpredictable targets, causing frequent branch prediction
+misses and high runtime overheads on modern processors.
+
+Common approaches to reduce this overhead include
+superinstructions, partial native code compilation,
+duplicating the interpreter's handlers, and switching
+from stack to register oriented virtual machines.
+While they often lead to improved performance, they can
+also require significant work to implement, and some of
+them are also non-portable leading to higher maintenance
+costs.
+
+This paper describes \emph{call threading} and how it can
+be used to implement efficient virtual machine interpreters.
+Simpler forms of call threading were used in the 1970s,
+but they quickly fell into disuse, largely because the
+processors at that time could execute a load and indirect jump
+faster than a function call.
+Modern processors have changed the relative costs of these
+operations. In particular, the return address stack branch
+predictor can allow a pair of a call and a return instruction
+to execute much faster than an indirect jump instruction that
+experiences a branch prediction miss.
+
+This paper describes in detail the implementation of call
+threading for a simple stack--oriented virtual machine,
+including the implementation of virtual machine instructions with
+control flow effects or immediate operands. Implementation details
+are given for the x86, AMD64, PowerPC, SPARC, and ARM architectures.
+The amount of machine--dependent code in this implementation is
+surprisingly small -- between 25 and 50 lines per processor architecture.
+
+To evaluate the method measurements were taken using hardware performance
+counters on the supported architectures. The results indicate that
+call threading results in significant reduction of branch
+prediction misses, some reduction in the number of instructions
+executed, and significant reduction in clock cycles.
+On average, the call threaded interpreters were about twice
+as fast as the direct threaded interpreters.
+%
+\section{The TAK machine}
+The TAK machine is a simple stack--oriented
+virtual machine, with instructions for stack accesses,
+arithmetic, unconditional and conditional jumps,
+and function calls and returns. It has two registers:
+a program counter pointing to an array of bytes,
+and a stack pointer pointing to an array of integers.
+The definition
+of the machine's instructions is shown in Figure~\ref{fig:the-tak-machine}.
+The TAK machine was designed to support running a compiled
+version of the Takeuchi function. The original functional
+source code of the Takeuchi function is shown in Figure~\ref{fig:tak-erl};
+the corresponding TAK virtual machine code in token threaded form is shown in
+Figure~\ref{fig:the-tak-program}.
+%
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{@{}ll}
+GET & \verb@x = sp[*pc++]; *--sp = x; NEXT;@ \\
+SET & \verb@x = *sp++; sp[*pc++] = x; NEXT;@ \\
+SUB1 & \verb@sp[0] -= 1; NEXT;@ \\
+RET & \verb@x = *sp++; n = *pc; pc = *sp++; sp += n; *--sp = x; NEXT;@ \\
+CALL & \verb@*--sp = pc+1; pc += *pc; NEXT;@ \\
+JMP & \verb@pc += *pc; NEXT;@ \\
+JGT & \verb@x = *sp++; y = *sp++; pc += (x > y) ? *pc : 1; NEXT;@ \\
+PUSH & \verb@*--sp = *pc++; NEXT;@ \\
+POP & \verb@++sp; NEXT;@ \\
+HALT & execution halts
+\end{tabular}
+\end{center}
+\caption{The TAK machine instructions}
+\label{fig:the-tak-machine}
+\end{figure}
+%
+\begin{figure}[htb]
+\begin{verbatim}
+tak(X, Y, Z) when X =< Y ->
+   Z;
+tak(X, Y, Z) ->
+   A1 = tak(X-1, Y, Z),
+   A2 = tak(Y-1, Z, X),
+   A3 = tak(Z-1, X, Y),
+   tak(A1, A2, A3).
+
+tak() -> 
+   tak(18, 12, 6).
+\end{verbatim}
+\caption{The functional code for TAK}
+\label{fig:tak-erl}
+\end{figure}
+%
+\begin{figure}[p]
+\begin{verbatim}
+#define NITER 255
+#define Ltak3 1
+/*  0 *//* tak3: */                     /* z y x ra */
+/*  0 */        OP_DEBUG,               /* z y x ra */
+/*  1 */        OP_GET, 2,              /* z y x ra y */
+/*  3 */        OP_GET, 2,              /* z y x ra y x */
+/*  5 */        OP_JGT, 11-6,           /* z y x ra */
+/*  7 */        OP_GET, 3,              /* z y x ra z */
+/*  9 */        OP_RET, 3,              /* z */
+/* 11 */        OP_GET, 3,              /* z y x ra z */
+/* 13 */        OP_GET, 3,              /* z y x ra z y */
+/* 15 */        OP_GET, 3,              /* z y x ra z y x */
+/* 17 */        OP_SUB1,                /* z y x ra z y x' */
+/* 18 */        OP_CALL, Ltak3-19,      /* z y x ra a */
+/* 20 */        OP_GET, 2,              /* z y x ra a x */
+/* 22 */        OP_GET, 5,              /* z y x ra a x z */
+/* 24 */        OP_GET, 5,              /* z y x ra a x z y */
+/* 26 */        OP_SUB1,                /* z y x ra a x z y' */
+/* 27 */        OP_CALL, Ltak3-28,      /* z y x ra a b */
+/* 29 */        OP_GET, 4,              /* z y x ra a b y */
+/* 31 */        OP_GET, 4,              /* z y x ra a b y x */
+/* 33 */        OP_GET, 7,              /* z y x ra a b y x z */
+/* 35 */        OP_SUB1,                /* z y x ra a b y x z' */
+/* 36 */        OP_CALL, Ltak3-37,      /* z y x ra a b c */
+/* 38 */        OP_SET, 5,              /* c y x ra a b */
+/* 40 */        OP_SET, 3,              /* c b x ra a */
+/* 42 */        OP_SET, 1,              /* c b a ra */
+/* 44 */        OP_JMP, Ltak3-45,       /* c b a ra */
+/* 46 *//* tak0: */                     /* */
+/* 46 */        OP_PUSH, 6,             /* ra 6 */
+/* 48 */        OP_PUSH, 12,            /* ra 6 12 */
+/* 50 */        OP_PUSH, 18,            /* ra 6 12 18 */
+/* 52 */        OP_CALL, Ltak3-53,      /* ra rv */
+/* 54 */        OP_RET, 0,              /* */
+/* 56 *//* loop: */                     /* */
+/* 56 */        OP_PUSH, NITER,         /* i */
+/* 58 */        OP_CALL, 46-59,         /* i rv */
+/* 60 */        OP_POP,                 /* i */
+/* 61 */        OP_SUB1,                /* i' */
+/* 62 */        OP_PUSH, 0,             /* i' 0 */
+/* 64 */        OP_GET, 1,              /* i' 0 i' */
+/* 66 */        OP_JGT, 58-67,          /* i' */
+/* 68 */        OP_POP,                 /* */
+/* 69 */        OP_HALT,                /* */
+\end{verbatim}
+\caption{The TAK program}
+\label{fig:the-tak-program}
+\end{figure}
+%
+\begin{figure}[htb]
+\begin{verbatim}
+op_get:
+        x = sp[*pc++]; *--sp = x; L1: goto *pc++;
+...
+tak3:   ...
+        &op_get, 2, /* BTB miss + update for goto in op_get */
+        &op_get, 2, /* BTB miss + update for goto in op_get */
+        &op_jgt, 5
+...
+\end{verbatim}
+\caption{The problem with DTC}
+\label{fig:the-problem-with-dtc}
+\end{figure}
+%
+\begin{figure}[htb]
+\begin{verbatim}
+op_get(arg0):
+        x = sp[arg0]; *--sp = x; L1: return;
+...
+tak3:   op_debug();
+        op_get(2); /* RAS update here, RAS hit in op_get */
+L2:     op_get(2); /* RAS update here, RAS hit in op_get */
+L3:     op_jgt(5);
+...
+\end{verbatim}
+\caption{The essence of CTC}
+\label{fig:the-essence-of-ctc}
+\end{figure}
+%
+\section{The Problem with Direct threading}
+Consider the two GET instructions after the
+\texttt{tak3} label at the start of the TAK
+program in Figure~\ref{fig:the-tak-program}.
+The direct threaded code for the GET instruction
+and the two instruction instances is shown in
+Figure~\ref{fig:the-problem-with-dtc}.
+The sequence of events during the execution of
+these two instructions is essentially the following:
+
+\begin{enumerate}
+\item load address from pc (address equals \texttt{op\_get})
+\item increment pc
+\item jump to the address (\texttt{op\_get})
+\item execute \texttt{op\_get}
+\item load address from pc (address equals \texttt{op\_get})
+\item increment pc
+\item L1: jump to the address (\texttt{op\_get});
+the BTB now predicts \texttt{op\_get} as the target of the jump at L1
+\item execute \texttt{op\_get}
+\item load address from pc (address equals \texttt{op\_jgt})
+\item increment pc
+\item L1: jump to the address (\texttt{op\_jgt});
+the BTB prediction for the jump at L1 (\texttt{op\_get}) differs from the
+current dynamic target (\texttt{op\_jgt}), the processor suffers a branch
+misprediction penalty, and the BTB is updated to predict \texttt{op\_jgt}
+as the target for the jump at L1
+\end{enumerate}
+\par\noindent The fundamental problem is that the indirect jumps at
+the end of the interpreter's handlers
+will jump to different targets at different points in
+time. This causes the BTB to frequently mispredict the
+dynamic targets of these indirect jumps, which in turn
+incurs significant performance penalties.
+%
+\section{The essence of call threading}
+The call threaded code for the GET instruction
+and the two instruction instances at the start
+of the TAK program is shown in Figure~\ref{fig:the-essence-of-ctc}.
+Th sequence of events during the execution of
+these two instructions is essentially the following:
+
+\begin{enumerate}
+\item call \texttt{op\_get};
+the return address L2 is stored in the return address location
+(in a register or on the stack), and is also pushed on the RAS
+\item execute \texttt{op\_get}
+\item return;
+the predicted target (L2) is popped off the RAS and execution
+continues there, the dynamic target (L2) is retrieved (from the
+stack or a register), and no misprediction occurs
+\item call \texttt{op\_get};
+the return address L3 is stored in the return address location
+(in a register or on the stack), and is also pushed on the RAS
+\item execute \texttt{op\_get}
+\item return;
+the predicted target (L3) is popped off the RAS and execution
+continues there, the dynamic target (L3) is retrieved (from the
+stack or a register), and no misprediction occurs
+\item call \texttt{op\_jgt}
+\end{enumerate}
+\par\noindent In essence, each dynamic invokation has its own
+branch prediction entry thanks to the RAS, which allows different
+instruction instances to continue at different targets without
+any branch mispredictions.
+%
+\section{Implementing Call--threading}
+%
+\section{Adapting call--threading to one-big-function interpreters}
+%
+\section{Experimental evaluation}
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{|@{~}l|r|r|r|r|}
+\hline
+Version & Clocks & Insns & CPI & BMR \\
+\hline
+C    &  206 &  296 & 0.695 & 0.052 \\
+BC   & 2913 & 1650 & 1.765 & 0.223 \\
+DTC  & 2226 & 1330 & 1.673 & 0.329 \\
+CTC0 & 1302 & 1176 & 1.107 & 0.041 \\
+CTC1 & 1236 & 1071 & 1.154 & 0.041 \\
+CTC2 &  920 &  965 & 0.953 & 0.041 \\
+CTC3 & 1837 & 1427 & 1.287 & 0.082 \\
+CTC4 & 1562 & 1306 & 1.196 & 0.041 \\
+CTC5 & 1060 & 1200 & 0.883 & 0.041 \\
+CTC6 &  954 &  941 & 1.014 & 0.041 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{K8 in 32-bit mode measurements}
+\label{fig:measurements-k8-32}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{|@{~}l|r|r|r|r|}
+\hline
+Version & Clocks & Insns & CPI & BMR \\
+\hline
+C    &  201 &  296 & 0.680 & 0.052 \\
+BC   & 3262 & 1906 & 1.712 & 0.223 \\
+DTC  & 2399 & 1427 & 1.680 & 0.252 \\
+CTC0 &  982 & 1127 & 0.871 & 0.040 \\
+CTC1 &  921 & 1034 & 0.891 & 0.041 \\
+CTC2 &  921 & 1034 & 0.891 & 0.041 \\
+CTC3 & 1128 & 1387 & 0.814 & 0.040 \\
+CTC4 & 1071 & 1310 & 0.818 & 0.041 \\
+CTC5 & 1071 & 1310 & 0.818 & 0.041 \\
+CTC6 & 1035 & 1050 & 0.985 & 0.041 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{K8 in 64-bit mode measurements}
+\label{fig:measurements-k8-64}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{|@{~}l|r|r|r|r|}
+\hline
+Version & Clocks & Insns & CPI & BMR \\
+\hline
+C    &  306 &  296 & 1.035 & 0.076 \\
+BC   & 3256 & 1650 & 1.973 & 0.197 \\
+DTC  & 2979 & 1330 & 2.240 & 0.282 \\
+CTC0 & 2076 & 1176 & 1.766 & 0.051 \\
+CTC1 & 1819 & 1071 & 1.699 & 0.039 \\
+CTC2 & 1794 &  965 & 1.859 & 0.039 \\
+CTC3 & 2128 & 1427 & 1.491 & 0.051 \\
+CTC4 & 1819 & 1306 & 1.393 & 0.039 \\
+CTC5 & 1844 & 1200 & 1.536 & 0.039 \\
+CTC6 & 1772 &  941 & 1.884 & 0.039 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{P4 measurements}
+\label{fig:measurements-p4}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{|@{~}l|r|r|r|r|}
+\hline
+Version & Clocks & Insns & CPI & BMR \\
+\hline
+C    &  259 &  296 & 0.876 & 0.074 \\
+BC   & 2356 & 1650 & 1.428 & 0.225 \\
+DTC  & 2127 & 1330 & 1.599 & 0.332 \\
+CTC0 & 1420 & 1176 & 1.207 & 0.061 \\
+CTC1 & 1247 & 1071 & 1.165 & 0.044 \\
+CTC2 & 1048 &  965 & 1.086 & 0.044 \\
+CTC3 & 1447 & 1427 & 1.014 & 0.059 \\
+CTC4 & 1286 & 1306 & 0.985 & 0.044 \\
+CTC5 & 1184 & 1200 & 0.986 & 0.044 \\
+CTC6 & 1025 &  941 & 1.089 & 0.044 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{P6 Model 11 measurements}
+\label{fig:measurements-p6m11}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{|@{~}l|r|r|r|r|}
+\hline
+Version & Clocks & Insns & CPI & BMR \\
+\hline
+C    &  259 &  296 & 0.876 & 0.074 \\
+BC   & 2356 & 1650 & 1.428 & 0.225 \\
+DTC  & 2126 & 1330 & 1.598 & 0.332 \\
+CTC0 & 1426 & 1176 & 1.213 & 0.061 \\
+CTC1 & 1251 & 1071 & 1.168 & 0.044 \\
+CTC2 & 1047 &  965 & 1.085 & 0.044 \\
+CTC3 & 1448 & 1427 & 1.015 & 0.059 \\
+CTC4 & 1228 & 1306 & 0.987 & 0.044 \\
+CTC5 & 1185 & 1200 & 0.987 & 0.044 \\
+CTC6 & 1026 &  941 & 1.090 & 0.044 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{P6 Model 8 measurements}
+\label{fig:measurements-p6m8}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{|@{~}l|r|r|r|r|}
+\hline
+Version & Clocks & Insns & CPI & BMR \\
+\hline
+C    &  259 &  296 & 0.876 & 0.074 \\
+BC   & 2357 & 1650 & 1.428 & 0.225 \\
+DTC  & 2109 & 1330 & 1.586 & 0.332 \\
+CTC0 & 1426 & 1176 & 1.213 & 0.061 \\
+CTC1 & 1251 & 1071 & 1.168 & 0.044 \\
+CTC2 & 1047 &  965 & 1.085 & 0.044 \\
+CTC3 & 1448 & 1427 & 1.015 & 0.059 \\
+CTC4 & 1288 & 1306 & 0.987 & 0.044 \\
+CTC5 & 1185 & 1200 & 0.987 & 0.044 \\
+CTC6 & 1026 &  941 & 1.090 & 0.044 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{P6 Model 7 measurements}
+\label{fig:measurements-p6m7}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{|@{~}l|r|r|r|r|}
+\hline
+Version & Clocks & Insns & CPI & BMR \\
+\hline
+C    &  259 &  296 & 0.876 & 0.074 \\
+BC   & 2357 & 1650 & 1.428 & 0.225 \\
+DTC  & 2126 & 1330 & 1.598 & 0.332 \\
+CTC0 & 1426 & 1176 & 1.213 & 0.061 \\
+CTC1 & 1251 & 1071 & 1.169 & 0.044 \\
+CTC2 & 1047 &  965 & 1.085 & 0.044 \\
+CTC3 & 1448 & 1427 & 1.015 & 0.059 \\
+CTC4 & 1288 & 1306 & 0.987 & 0.044 \\
+CTC5 & 1185 & 1200 & 0.987 & 0.044 \\
+CTC6 & 1026 &  941 & 1.090 & 0.044 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{P6 Model 3 measurements}
+\label{fig:measurements-p6m3}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{|@{~}l|r|r|r|r|}
+\hline
+Version & Clocks & Insns & CPI \\
+\hline
+C    &  395 &  368 & 1.073 \\
+BC   & 2952 & 2138 & 1.381 \\
+DTC  & 2182 & 1187 & 1.837 \\
+CTC0 & 1261 &  925 & 1.363 \\
+CTC1 & 1072 &  808 & 1.328 \\
+CTC2 & 1072 &  808 & 1.328 \\
+CTC3 & 1812 & 1222 & 1.482 \\
+CTC4 & 1578 & 1087 & 1.452 \\
+CTC5 & 1578 & 1087 & 1.452 \\
+CTC6 & 1099 &  808 & 1.361 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{MPC7455 measurements}
+\label{fig:measurements-mpc7455}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{|@{~}l|r|r|r|r|}
+\hline
+Version & Clocks & Insns & CPI \\
+\hline
+C    &  235 &  199 & 1.184 \\
+BC   & 3479 & 2405 & 1.447 \\
+DTC  & 2654 & 1481 & 1.788 \\
+CTC0 & 1571 & 1275 & 1.233 \\
+CTC1 & 1373 & 1167 & 1.176 \\
+CTC2 & 1373 & 1167 & 1.176 \\
+CTC3 & 1577 & 1407 & 1.121 \\
+CTC4 & 1331 & 1318 & 1.009 \\
+CTC5 & 1331 & 1318 & 1.009 \\
+CTC6 & 1331 & 1318 & 1.009 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{UltraSPARC IIIi measurements}
+\label{fig:measurements-us3i}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{|@{~}l|r|r|r|r|}
+\hline
+Version & Clocks & Insns & CPI \\
+\hline
+C    &  251 &  304 & 0.826 \\
+BC   & 3075 & 1930 & 1.593 \\
+DTC  & 2215 & 1436 & 1.542 \\
+CTC0 & 1473 & 1200 & 1.228 \\
+CTC1 & 1279 & 1095 & 1.168 \\
+CTC2 & 1007 &  989 & 1.018 \\
+CTC3 & 1851 & 1452 & 1.275 \\
+CTC4 & 1637 & 1330 & 1.231 \\
+CTC5 & 1546 & 1225 & 1.262 \\
+CTC6 & 1363 &  965 & 1.412 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{K6-III measurements}
+\label{fig:measurements-k63}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{|@{~}l|r|r|r|r|}
+\hline
+Version & Clocks & Insns & CPI & BMR \\
+\hline
+C    &  211 &  304 & 0.693 & 0.085 \\
+BC   & 2089 & 1930 & 1.082 & 0.225 \\
+DTC  & 1641 & 1436 & 1.143 & 0.264 \\
+CTC0 & 1701 & 1200 & 1.417 & 0.113 \\
+CTC1 & 1498 & 1095 & 1.368 & 0.056 \\
+CTC2 & 1182 &  989 & 1.195 & 0.056 \\
+CTC3 & 1476 & 1452 & 1.016 & 0.096 \\
+CTC4 & 1372 & 1330 & 1.032 & 0.107 \\
+CTC5 & 1343 & 1225 & 1.097 & 0.107 \\
+CTC6 & 1204 &  965 & 1.248 & 0.095 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{P5MMX measurements}
+\label{fig:measurements-p5mmx}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{|@{~}l|r|r|r|r|}
+\hline
+Version & Clocks & Insns & CPI & BMR \\
+\hline
+C    &  247 &  304 & 0.811 & 0.322 \\
+BC   & 1962 & 1930 & 1.016 & 0.238 \\
+DTC  & 1540 & 1436 & 1.073 & 0.294 \\
+CTC0 & 2308 & 1200 & 1.923 & 0.716 \\
+CTC1 & 2220 & 1095 & 2.028 & 0.798 \\
+CTC2 & 1846 &  989 & 1.866 & 0.798 \\
+CTC3 & 2066 & 1452 & 1.423 & 0.696 \\
+CTC4 & 1994 & 1330 & 1.499 & 0.798 \\
+CTC5 & 1946 & 1225 & 1.589 & 0.798 \\
+CTC6 & 1805 &  965 & 1.871 & 0.798 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{P5 measurements}
+\label{fig:measurements-p5}
+\end{figure}
+
+%
+\section{Related work}
+\cite{Bell73,Dewar75,Ritter80,Klint81,Kogge82,ErtlG01,ErtlG03:PLDI,ErtlG03:JILP,HoogerbruggeATW99,HoogerbruggeA00,DavisBCGW03,Proebsting95:POPL,BhandarkarD97,Costa99:ppdp,NassenCS01,PiumartaR98,IA32OPT,Rodriguez93:tcj59,Curley93,ShiGBE05,BerndlVZB05,RossiS96,VitaleA05,ErtlG04,SullivanBBGA03}
+%
+\section{Conclusions}
+%
+\bibliographystyle{plain}
+\bibliography{mikpe}
+%
+\end{document}
